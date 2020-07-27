@@ -16,3 +16,8 @@
   </head>
   <body>
     <div class="container">
+      <nav class="menu">
+        <?php foreach($site->children()->listed() as $subpage): ?>
+          <a class="menuItem" href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
+        <?php endforeach ?>
+      </nav>
